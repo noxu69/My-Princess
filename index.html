@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Princess Day, Princess Ritija (Rino) 👑💙</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Cinzel Decorative, Playfair Display, Dancing Script, Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            royal: ['"Cinzel Decorative"', 'serif'],
+            serifDisplay: ['"Playfair Display"', 'serif'],
+            script: ['"Dancing Script"', 'cursive'],
+            sans: ['"Quicksand"', 'sans-serif'],
+          },
+          colors: {
+            princessPink: '#ff7eb9',
+            softBlush: '#fff0f6',
+            lavenderDream: '#e0c3fc',
+            spiderBlue: '#3b82f6',
+            deepSapphire: '#1d4ed8',
+            royalGold: '#f59e0b',
+          },
+          animation: {
+            'float-slow': 'floatSlow 5s ease-in-out infinite',
+            'float-fast': 'floatSlow 3s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'spin-slow': 'spin 16s linear infinite',
+            'bounce-gentle': 'bounceGentle 2.5s infinite',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(2deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 25px rgba(255, 126, 185, 0.45), 0 0 50px rgba(96, 165, 250, 0.35)' },
+              '50%': { boxShadow: '0 0 40px rgba(255, 126, 185, 0.85), 0 0 75px rgba(96, 165, 250, 0.65)' },
+            },
+            bounceGentle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Fairy-Tale Styling & Glassmorphism */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fff0f7 0%, #f3e8ff 35%, #e0f2fe 70%, #fce7f3 100%);
+      background-attachment: fixed;
+      color: #3b1d4a;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Ambient Canvas Layer */
+    #ambient-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glass Card */
+    .royal-glass {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 20px 50px rgba(168, 85, 247, 0.14), 0 8px 20px rgba(59, 130, 246, 0.1);
+    }
+
+    .royal-glass-blue {
+      background: linear-gradient(145deg, rgba(239, 246, 255, 0.85), rgba(243, 232, 255, 0.85));
+      backdrop-filter: blur(16px);
+      border: 2px solid rgba(147, 197, 253, 0.75);
+      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.14);
+    }
+
+    /* Tiara Coronation Transition */
+    #tiara-wrapper {
+      transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.8s ease;
+    }
+    .crowned-tiara {
+      transform: translateY(34px) scale(1.12) !important;
+      filter: drop-shadow(0 0 24px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.7));
+    }
+
+    /* Royal Scroll Unroll Animation */
+    .scroll-parchment {
+      background: linear-gradient(180deg, #fffdf9 0%, #fff5f8 50%, #f5f8ff 100%);
+      border-top: 14px solid #eab308;
+      border-bottom: 14px solid #eab308;
+      box-shadow: inset 0 0 40px rgba(251, 207, 232, 0.45), 0 25px 50px rgba(107, 33, 168, 0.18);
+      transition: max-height 1.1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease, padding 0.8s ease;
+      overflow: hidden;
+    }
+    .scroll-closed {
+      max-height: 0px;
+      opacity: 0;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      border-width: 0px;
+    }
+    .scroll-open {
+      max-height: 2600px;
+      opacity: 1;
+    }
+
+    /* 3D Flip Card for 50+ Reasons */
+    .flip-card {
+      perspective: 1000px;
+      height: 190px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.15rem;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fdf2f8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #f472b6, #60a5fa);
+      border-radius: 9999px;
+    }
+
+    /* Coupon Stamp Animation */
+    @keyframes stampPop {
+      0% { transform: scale(2.8) rotate(-25deg); opacity: 0; }
+      60% { transform: scale(0.9) rotate(-12deg); opacity: 1; }
+      100% { transform: scale(1) rotate(-14deg); opacity: 1; }
+    }
+    .stamp-badge {
+      animation: stampPop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Floating Burst Particles */
+    .burst-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      animation: flyBurst 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes flyBurst {
+      0% { transform: translate(0, 0) scale(0.5) rotate(0deg); opacity: 1; }
+      100% { transform: translate(var(--tx), var(--ty)) scale(1.35) rotate(var(--rot)); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="min-h-screen relative selection:bg-pink-200 selection:text-purple-900">
+
+  <!-- Background Particle Canvas (Floating Hearts, Sparkles, Blue Spider Lily Petals) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Toast Notification Banner (No alert() used!) -->
+  <div id="royal-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none max-w-sm">
+    <div class="royal-glass rounded-2xl px-5 py-3.5 border-2 border-pink-300 shadow-2xl flex items-center gap-3">
+      <span id="toast-icon" class="text-2xl">👑</span>
+      <div>
+        <p id="toast-title" class="font-bold text-sm text-purple-900">Royal Decree</p>
+        <p id="toast-msg" class="text-xs text-purple-700 font-medium">Princess Rino's wish granted!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Royal Header Bar -->
+  <header class="sticky top-0 z-40 px-4 py-3">
+    <div class="max-w-7xl mx-auto royal-glass rounded-full px-4 sm:px-7 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <!-- Left Crest Title -->
+      <div class="flex items-center gap-2.5">
+        <span class="text-2xl animate-bounce-gentle">👑</span>
+        <div>
+          <span class="font-royal text-sm sm:text-base font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            Princess Ritija Day
+          </span>
+          <span class="hidden md:inline-block ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200">
+            Nov 18 • Forever Rino 💙
+          </span>
+        </div>
+      </div>
+
+      <!-- Center Quick Nav Pills (Desktop) -->
+      <nav class="hidden lg:flex items-center gap-1.5 text-xs font-bold text-purple-800">
+        <button onclick="switchTab('decree')" class="px-3 py-1.5 rounded-full hover:bg-pink-100 transition">📜 Love Letter</button>
+        <button onclick="switchTab('garden')" class="px-3 py-1.5 rounded-full hover:bg-blue-100 transition">💠 Spider Lily Garden</button>
+        <button onclick="switchTab('coupons')" class="px-3 py-1.5 rounded-full hover:bg-amber-100 transition">🎟️ Royal Coupons</button>
+        <button onclick="switchTab('scanner')" class="px-3 py-1.5 rounded-full hover:bg-pink-100 transition">💖 Cuteness Meter</button>
+        <button onclick="switchTab('reasons')" class="px-3 py-1.5 rounded-full hover:bg-purple-100 transition">✨ 52 Reasons</button>
+        <button onclick="switchTab('castle')" class="px-3 py-1.5 rounded-full hover:bg-blue-100 transition">🏰 Our Story</button>
+      </nav>
+
+      <!-- Right Controls: Music Box Toggle & Love Shower -->
+      <div class="flex items-center gap-2">
+        <button id="music-toggle-btn" onclick="toggleMusicBox()" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 border border-purple-200 hover:scale-105 active:scale-95 transition shadow-sm">
+          <span id="music-icon">🎵</span>
+          <span id="music-label">Music Box: Off</span>
+        </button>
+        <button onclick="showerLove(event)" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-md hover:shadow-pink-300/60 hover:scale-105 active:scale-95 transition">
+          💖 Send Kisses
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-24 pt-4 space-y-12">
+
+    <!-- =====================================================================
+         SECTION 1: GRAND ROYAL ENTRANCE & CORONATION CEREMONY
+    ====================================================================== -->
+    <section class="royal-glass rounded-[2.5rem] p-6 sm:p-10 md:p-14 text-center relative overflow-hidden animate-pulse-glow">
+      <!-- Decorative Corner Blue Spider Lily SVGs -->
+      <div class="absolute -top-6 -left-6 w-36 h-36 opacity-35 pointer-events-none animate-spin-slow">
+        <svg viewBox="0 0 200 200" fill="none">
+          <g stroke="#2563eb" stroke-width="2.5" stroke-linecap="round">
+            <path d="M100 100 C70 40, 30 30, 15 55 C35 55, 65 75, 100 100Z" fill="#93c5fd" fill-opacity="0.35"/>
+            <path d="M100 100 C130 40, 170 30, 185 55 C165 55, 135 75, 100 100Z" fill="#60a5fa" fill-opacity="0.35"/>
+            <path d="M100 100 C160 80, 180 120, 160 145 C145 125, 125 110, 100 100Z" fill="#93c5fd" fill-opacity="0.35"/>
+            <path d="M100 100 C40 80, 20 120, 40 145 C55 125, 75 110, 100 100Z" fill="#60a5fa" fill-opacity="0.35"/>
+            <path d="M100 100 C85 155, 115 155, 100 185 C95 155, 105 130, 100 100Z" fill="#3b82f6" fill-opacity="0.4"/>
+            <path d="M100 100 Q60 20 35 15" stroke="#1d4ed8" stroke-width="1.5"/>
+            <path d="M100 100 Q140 20 165 15" stroke="#1d4ed8" stroke-width="1.5"/>
+            <path d="M100 100 Q100 10 100 5" stroke="#1d4ed8" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="absolute -bottom-6 -right-6 w-36 h-36 opacity-35 pointer-events-none animate-spin-slow">
+        <svg viewBox="0 0 200 200" fill="none">
+          <g stroke="#2563eb" stroke-width="2.5" stroke-linecap="round">
+            <path d="M100 100 C70 40, 30 30, 15 55 C35 55, 65 75, 100 100Z" fill="#93c5fd" fill-opacity="0.35"/>
+            <path d="M100 100 C130 40, 170 30, 185 55 C165 55, 135 75, 100 100Z" fill="#60a5fa" fill-opacity="0.35"/>
+            <path d="M100 100 C160 80, 180 120, 160 145 C145 125, 125 110, 100 100Z" fill="#93c5fd" fill-opacity="0.35"/>
+            <path d="M100 100 C40 80, 20 120, 40 145 C55 125, 75 110, 100 100Z" fill="#60a5fa" fill-opacity="0.35"/>
+            <path d="M100 100 C85 155, 115 155, 100 185 C95 155, 105 130, 100 100Z" fill="#3b82f6" fill-opacity="0.4"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Top Royal Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 border border-pink-300/80 text-xs sm:text-sm font-bold text-purple-800 shadow-sm mb-5">
+        <span>✨ Royal Proclamation • November 18, 2026 ✨</span>
+      </div>
+
+      <!-- Interactive Coronation Crest & Descending Tiara -->
+      <div class="relative max-w-xs mx-auto mb-6 pt-2 pb-4 select-none">
+        <!-- Floating Tiara SVG -->
+        <div id="tiara-wrapper" class="w-36 h-24 mx-auto animate-float-slow cursor-pointer" onclick="crownPrincess(event)" title="Tap to Crown Princess Ritija!">
+          <svg viewBox="0 0 220 130" class="w-full h-full drop-shadow-lg">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a"/>
+                <stop offset="45%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#d97706"/>
+              </linearGradient>
+              <linearGradient id="sapphireGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#93c5fd"/>
+                <stop offset="50%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#1d4ed8"/>
+              </linearGradient>
+              <linearGradient id="pinkGemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fbcfe8"/>
+                <stop offset="100%" stop-color="#ec4899"/>
+              </linearGradient>
+            </defs>
+            <!-- Tiara Base & Arches -->
+            <path d="M25 105 Q110 85 195 105 L185 116 Q110 98 35 116 Z" fill="url(#goldGrad)" stroke="#b45309" stroke-width="2"/>
+            <path d="M35 103 L52 55 L82 92 L110 25 L138 92 L168 55 L185 103" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M52 98 Q80 65 110 92 Q140 65 168 98" fill="none" stroke="url(#goldGrad)" stroke-width="4"/>
+            <!-- Center Blue Spider-Lily Sapphire Heart Gem -->
+            <polygon points="110,42 122,60 110,78 98,60" fill="url(#sapphireGrad)" stroke="#eff6ff" stroke-width="1.5"/>
+            <!-- Side Pink Heart Gems -->
+            <circle cx="52" cy="52" r="7" fill="url(#pinkGemGrad)" stroke="#fff" stroke-width="1.5"/>
+            <circle cx="168" cy="52" r="7" fill="url(#pinkGemGrad)" stroke="#fff" stroke-width="1.5"/>
+            <circle cx="110" cy="20" r="6" fill="#60a5fa" stroke="#fff" stroke-width="1.5"/>
+            <circle cx="82" cy="86" r="5" fill="#f472b6"/>
+            <circle cx="138" cy="86" r="5" fill="#f472b6"/>
+          </svg>
+        </div>
+
+        <!-- Royal Monogram Crest -->
+        <div onclick="crownPrincess(event)" class="mt-4 w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 p-1.5 shadow-xl cursor-pointer hover:scale-105 transition">
+          <div class="w-full h-full rounded-full bg-white/90 flex flex-col items-center justify-center border-2 border-amber-300 relative">
+            <span class="text-xs font-bold tracking-widest text-blue-600 uppercase">Her Majesty</span>
+            <span class="font-royal text-3xl font-black bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">R &amp; P</span>
+            <span class="text-[11px] font-bold text-pink-500 mt-0.5">Rino 💙 Prinsu</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Hero Headline -->
+      <h1 class="font-royal text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
+        Happy Princess Day,<br class="hidden sm:inline" /> My Love Ritija! 👑💙
+      </h1>
+
+      <p class="font-script text-2xl sm:text-4xl text-pink-600 mt-3">
+        To my sweetest Rino, my favorite flower, and my forever royalty
+      </p>
+
+      <p class="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-purple-900/85 font-medium leading-relaxed">
+        Today is National Princess Day, and there isn't a single soul in the entire universe who deserves to be celebrated, pampered, adored, and crowned more than you, <strong class="text-pink-600">Ritija</strong>. Crafted with endless love by <strong class="text-blue-600">Prinsu</strong> just for you!
+      </p>
+
+      <!-- Coronation CTA Button & Status -->
+      <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button id="coronation-btn" onclick="crownPrincess(event)" class="group relative px-8 py-4 rounded-full font-bold text-base sm:text-lg text-white bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 shadow-xl shadow-pink-300/50 hover:shadow-blue-300/60 hover:scale-105 active:scale-95 transition-all flex items-center gap-3">
+          <span class="text-2xl group-hover:rotate-12 transition">👑</span>
+          <span id="coronation-btn-text">Tap to Crown Princess Ritija</span>
+          <span class="text-xl">✨</span>
+        </button>
+
+        <button onclick="switchTab('garden')" class="px-6 py-4 rounded-full font-bold text-sm sm:text-base text-blue-700 bg-blue-50/90 border-2 border-blue-200 hover:bg-blue-100 hover:scale-105 transition flex items-center gap-2 shadow-sm">
+          <span>💠</span>
+          <span>Enter Blue Spider Lily Garden</span>
+        </button>
+      </div>
+
+      <!-- Coronation Status Pill -->
+      <div id="coronation-status" class="mt-4 text-xs sm:text-sm font-bold text-purple-700">
+        ✨ Status: Awaiting Royal Coronation Tap Above ✨
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: INTERACTIVE ROYAL CONTROL PANEL (NAVIGATION TABS)
+    ====================================================================== -->
+    <section id="royal-dashboard" class="space-y-6">
+      <div class="text-center">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-blue-600 bg-blue-100/80 px-3.5 py-1 rounded-full border border-blue-200">
+          Interactive Royal Palace Control Panel
+        </span>
+        <h2 class="font-serifDisplay text-2xl sm:text-4xl font-bold text-purple-950 mt-2">
+          Explore Your Royal Kingdom, Princess Rino 🏰💖
+        </h2>
+        <p class="text-xs sm:text-sm text-purple-800/80 mt-1">
+          Tap any royal chamber below to open your surprises, interactive garden, pamper coupons &amp; love games!
+        </p>
+      </div>
+
+      <!-- 6-Button Interactive Control Panel Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <button onclick="switchTab('decree')" id="tab-btn-decree" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1 border-2 border-pink-400 bg-pink-50/90 shadow-md">
+          <div class="text-2xl sm:text-3xl mb-1">📜</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">Royal Decree</div>
+          <div class="text-[11px] text-pink-600 font-semibold">Love Letter</div>
+        </button>
+
+        <button onclick="switchTab('garden')" id="tab-btn-garden" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1">
+          <div class="text-2xl sm:text-3xl mb-1">💠</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">Lily Garden</div>
+          <div class="text-[11px] text-blue-600 font-semibold">Blue Spider Lilies</div>
+        </button>
+
+        <button onclick="switchTab('coupons')" id="tab-btn-coupons" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1">
+          <div class="text-2xl sm:text-3xl mb-1">🎟️</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">Pamper Passes</div>
+          <div class="text-[11px] text-amber-600 font-semibold">Redeem Wishes</div>
+        </button>
+
+        <button onclick="switchTab('scanner')" id="tab-btn-scanner" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1">
+          <div class="text-2xl sm:text-3xl mb-1">💖</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">Cuteness Meter</div>
+          <div class="text-[11px] text-rose-600 font-semibold">Aura &amp; Hugs</div>
+        </button>
+
+        <button onclick="switchTab('reasons')" id="tab-btn-reasons" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1">
+          <div class="text-2xl sm:text-3xl mb-1">✨</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">52 Reasons</div>
+          <div class="text-[11px] text-purple-600 font-semibold">Flip Cards</div>
+        </button>
+
+        <button onclick="switchTab('castle')" id="tab-btn-castle" class="tab-btn royal-glass rounded-2xl p-3.5 text-center transition-all hover:-translate-y-1">
+          <div class="text-2xl sm:text-3xl mb-1">🏰</div>
+          <div class="font-bold text-xs sm:text-sm text-purple-950">Our Castle</div>
+          <div class="text-[11px] text-indigo-600 font-semibold">Milestones</div>
+        </button>
+      </div>
+
+      <!-- =================================================================
+           MODULE 1: ENCHANTED ROYAL DECREE & LOVE LETTER (WAX SEAL SCROLL)
+      ================================================================== -->
+      <div id="panel-decree" class="module-panel royal-glass rounded-[2rem] p-6 sm:p-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="inline-block px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold mb-2">
+            Official Royal Proclamation #1118
+          </span>
+          <h3 class="font-royal text-2xl sm:text-3xl font-bold text-purple-950">
+            The Enchanted Scroll for Princess Ritija 📜
+          </h3>
+          <p class="text-sm text-purple-800/80 mt-2">
+            Tap the glowing royal wax seal below to unroll Prinsu's heartfelt Princess Day decree!
+          </p>
+
+          <!-- Interactive Wax Seal Button -->
+          <div class="my-7 flex justify-center">
+            <button id="wax-seal-btn" onclick="toggleScroll()" class="group relative w-28 h-28 rounded-full bg-gradient-to-br from-rose-500 via-pink-600 to-purple-700 text-white shadow-2xl border-4 border-amber-300 flex flex-col items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
+              <span class="text-3xl group-hover:scale-110 transition">👑</span>
+              <span id="seal-text" class="text-[10px] font-extrabold uppercase tracking-wider mt-1">Break Seal</span>
+              <span class="absolute -inset-2 rounded-full border-2 border-dashed border-amber-400/70 animate-spin-slow pointer-events-none"></span>
+            </button>
+          </div>
+
+          <!-- Unrolling Royal Scroll -->
+          <div id="royal-scroll" class="scroll-parchment scroll-closed rounded-2xl px-6 sm:px-10 py-8 text-left relative">
+            <div class="flex items-center justify-between border-b border-pink-200 pb-4 mb-6">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-blue-600">Kingdom of Eternal Love</p>
+                <h4 class="font-script text-3xl text-pink-600 font-bold">My Dearest Princess Ritija (Rino),</h4>
+              </div>
+              <span class="text-3xl">💠👑</span>
+            </div>
+
+            <div class="space-y-4 text-sm sm:text-base text-purple-950/90 leading-relaxed font-medium">
+              <p>
+                Happy Princess Day, my love! Today is <strong>November 18</strong>, and I wanted to build an entire magical world just to remind you of something you should feel every single second of every day: <strong>you are my real-life princess, my queen, my peace, and my greatest blessing.</strong>
+              </p>
+              <p>
+                Every time I think back to <strong>May 8 at 3:00 PM</strong>—the exact moment our paths crossed on Discord—I still smile like it happened five minutes ago. What started as a simple moment turned into the most beautiful chapter of my entire life. And when <strong>October 7, 2025 at 12:00 PM</strong> arrived and you officially became mine, my heart found its forever home.
+              </p>
+              <p>
+                Like the rare, mesmerizing <strong>Blue Spider Lily</strong> you love so much, there is nobody else in this world anything like you, Rino. You have the softest heart, the cutest laugh, the prettiest soul, and a magic that turns my ordinary days into a fairy tale. Even on days when life gets busy or stressful, just hearing your voice or seeing your name pop up makes everything brighter.
+              </p>
+              <p>
+                Thank you for loving me, for being my Rino, and for letting me be your Prinsu. Today and always, your crown never slips—and I will always be right beside you to protect your smile, hype up your dreams, and spoil you endlessly.
+              </p>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-pink-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <p class="text-xs text-purple-600 font-bold uppercase">Forever &amp; Always Yours,</p>
+                <p class="font-script text-3xl text-blue-600 font-bold">Your Prinsu 💙👑</p>
+              </div>
+              <button onclick="showerLove(event)" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-blue-500 text-white text-xs font-bold shadow-md hover:scale-105 transition">
+                💖 Hug Prinsu Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================
+           MODULE 2: BLUE SPIDER LILY ENCHANTED GARDEN (INTERACTIVE CANVAS)
+      ================================================================== -->
+      <div id="panel-garden" class="module-panel hidden royal-glass-blue rounded-[2rem] p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-1">
+              💠 Ritija's Favorite Flower Sanctuary
+            </span>
+            <h3 class="font-royal text-2xl sm:text-3xl font-bold text-blue-950">
+              The Enchanted Blue Spider Lily Garden
+            </h3>
+            <p class="text-xs sm:text-sm text-blue-900/80 mt-1">
+              Tap or click anywhere inside the twilight meadow below to bloom glowing <strong>Blue Spider Lilies</strong> and reveal secret love notes from Prinsu!
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-3.5 py-2 rounded-full bg-white/80 border border-blue-200 text-xs font-bold text-blue-800">
+              💠 Blooms Grown: <span id="lily-count" class="text-pink-600 text-sm">3</span>
+            </span>
+            <button onclick="bloomRandomBouquet()" class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition">
+              ✨ Bloom Royal Bouquet
+            </button>
+            <button onclick="clearGarden()" class="px-3.5 py-2 rounded-full bg-white/80 text-blue-700 border border-blue-200 text-xs font-bold hover:bg-blue-50 transition">
+              Reset Meadow
+            </button>
+          </div>
+        </div>
+
+        <!-- Secret Message Banner from Latest Bloom -->
+        <div id="lily-secret-banner" class="mb-4 px-5 py-3 rounded-2xl bg-white/85 border border-blue-300 flex items-center justify-between gap-3 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">💠</span>
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-blue-600">Whisper from the Blue Spider Lily:</p>
+              <p id="lily-secret-text" class="text-sm sm:text-base font-bold text-purple-950">
+                "Just like a rare Blue Spider Lily, you are one of a kind in the entire universe, Rino! 💙"
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Botanical Canvas -->
+        <div id="garden-container" class="relative w-full h-[380px] sm:h-[440px] rounded-3xl overflow-hidden border-2 border-blue-300/80 shadow-inner cursor-crosshair select-none" style="background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0f172a 65%, #090d16 100%);">
+          <canvas id="lily-canvas" class="w-full h-full block"></canvas>
+          <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] text-blue-200/80 pointer-events-none">
+            <span>✨ Tap anywhere on the night sky or meadow to plant a glowing Blue Spider Lily</span>
+            <span>Fireflies: Active 🌟</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================
+           MODULE 3: ROYAL PRINCESS PAMPER & WISH COUPONS
+      ================================================================== -->
+      <div id="panel-coupons" class="module-panel hidden royal-glass rounded-[2rem] p-6 sm:p-10">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-2">
+            🎟️ Official Princess Day Perks • Zero Expiration Date
+          </span>
+          <h3 class="font-royal text-2xl sm:text-3xl font-bold text-purple-950">
+            Princess Rino's Royal Pamper Passes
+          </h3>
+          <p class="text-xs sm:text-sm text-purple-800/80 mt-1">
+            Tap any golden ticket to stamp and claim it! Prinsu is legally bound by Royal Law to fulfill every single pass! 💖
+          </p>
+          <div class="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/90 text-pink-800 text-xs font-bold">
+            <span>Claimed Passes: <strong id="claimed-count">0</strong> / 6</span>
+            <button onclick="resetCoupons()" class="ml-2 underline text-purple-700 hover:text-purple-950">Reset</button>
+          </div>
+        </div>
+
+        <div id="coupons-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Populated dynamically via JS for clean interactivity -->
+        </div>
+      </div>
+
+      <!-- =================================================================
+           MODULE 4: CUTENESS & ROYAL AURA SCANNER + LOVE SHOWER
+      ================================================================== -->
+      <div id="panel-scanner" class="module-panel hidden royal-glass rounded-[2rem] p-6 sm:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <!-- Left: Cuteness & Royal Aura Scanner -->
+          <div class="bg-white/80 rounded-3xl p-6 sm:p-8 border-2 border-pink-200 shadow-lg text-center">
+            <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">
+              🔬 Royal Laboratory Diagnostic
+            </span>
+            <h3 class="font-royal text-2xl font-bold text-purple-950 mt-2">
+              Princess Aura &amp; Cuteness Scanner
+            </h3>
+            <p class="text-xs text-purple-700 mt-1">
+              Scan Ritija's current Princess Energy, Adorableness &amp; Rino Charm!
+            </p>
+
+            <!-- Meter Visual -->
+            <div class="my-6">
+              <div class="flex justify-between text-xs font-bold text-purple-900 mb-1.5">
+                <span>Cuteness Level</span>
+                <span id="scanner-percent" class="text-pink-600 font-extrabold">Ready to Scan</span>
+              </div>
+              <div class="w-full h-6 bg-purple-100 rounded-full overflow-hidden p-1 border border-pink-300">
+                <div id="scanner-bar" class="h-full w-1/6 rounded-full bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 transition-all duration-1000"></div>
+              </div>
+            </div>
+
+            <!-- Diagnostic Readout Box -->
+            <div id="scanner-result" class="p-4 rounded-2xl bg-gradient-to-r from-pink-50 to-blue-50 border border-purple-200 text-xs sm:text-sm font-bold text-purple-900 min-h-[76px] flex items-center justify-center">
+              Tap "Run Royal Scan" below to measure Rino's cuteness levels! ✨
+            </div>
+
+            <button onclick="runCutenessScan(event)" class="mt-6 w-full py-3.5 rounded-full font-bold text-white bg-gradient-to-r from-pink-500 via-rose-500 to-purple-600 shadow-lg hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-2">
+              <span>🔮</span>
+              <span>Run Royal Cuteness Scan</span>
+            </button>
+          </div>
+
+          <!-- Right: Interactive Affection & Compliment Dispenser -->
+          <div class="bg-gradient-to-br from-blue-50/90 via-purple-50/90 to-pink-50/90 rounded-3xl p-6 sm:p-8 border-2 border-blue-200 shadow-lg text-center">
+            <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">
+              💞 Instant Dopamine Dispenser
+            </span>
+            <h3 class="font-royal text-2xl font-bold text-blue-950 mt-2">
+              Shower Princess Rino With Love
+            </h3>
+            <p class="text-xs text-blue-800 mt-1">
+              Every tap sends virtual forehead kisses, tightest hugs &amp; sweet whispers from Prinsu!
+            </p>
+
+            <!-- Live Counters -->
+            <div class="grid grid-cols-3 gap-3 my-6">
+              <div class="bg-white/90 rounded-2xl p-3 border border-pink-200">
+                <div class="text-xl">😘</div>
+                <div id="kiss-counter" class="text-lg sm:text-xl font-black text-pink-600">1,000</div>
+                <div class="text-[11px] font-bold text-purple-800">Kisses Sent</div>
+              </div>
+              <div class="bg-white/90 rounded-2xl p-3 border border-blue-200">
+                <div class="text-xl">🫂</div>
+                <div id="hug-counter" class="text-lg sm:text-xl font-black text-blue-600">500</div>
+                <div class="text-[11px] font-bold text-purple-800">Tight Hugs</div>
+              </div>
+              <div class="bg-white/90 rounded-2xl p-3 border border-amber-200">
+                <div class="text-xl">💠</div>
+                <div id="lily-gift-counter" class="text-lg sm:text-xl font-black text-indigo-600">118</div>
+                <div class="text-[11px] font-bold text-purple-800">Spider Lilies</div>
+              </div>
+            </div>
+
+            <!-- Sweet Compliment Box -->
+            <div class="p-4 rounded-2xl bg-white/90 border border-pink-200 mb-5">
+              <p class="text-[11px] font-bold uppercase text-pink-500 mb-1">Prinsu's Whisper to You:</p>
+              <p id="compliment-display" class="font-script text-2xl text-purple-950 font-bold">
+                "You are the cutest human being ever created, my Rino! 💖"
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button onclick="showerLove(event)" class="flex-1 py-3.5 px-5 rounded-full font-bold text-sm text-white bg-gradient-to-r from-blue-500 to-pink-500 shadow-lg hover:scale-105 active:scale-95 transition">
+                💖 Tap for Kisses &amp; Compliment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================
+           MODULE 5: 52 REASONS WHY RITIJA IS THE ULTIMATE PRINCESS
+      ================================================================== -->
+      <div id="panel-reasons" class="module-panel hidden royal-glass rounded-[2rem] p-6 sm:p-10">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold mb-1">
+              ✨ 52 Royal Truths (1 for Every Week of the Year!)
+            </span>
+            <h3 class="font-royal text-2xl sm:text-3xl font-bold text-purple-950">
+              Why Ritija Is My Forever Princess
+            </h3>
+            <p class="text-xs sm:text-sm text-purple-800/80 mt-1">
+              Tap any card to flip it over, or search/filter through all 52 reasons Prinsu adores you!
+            </p>
+          </div>
+
+          <!-- Search & Reveal All Controls -->
+          <div class="flex flex-wrap items-center gap-2">
+            <input id="reason-search" type="text" oninput="renderReasons()" placeholder="Search reasons (e.g. smile, cute, voice)..." class="px-4 py-2 rounded-full bg-white/90 border border-purple-200 text-xs font-semibold text-purple-900 focus:outline-none focus:border-pink-400 w-56" />
+            <button onclick="flipAllReasons()" class="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold shadow hover:scale-105 transition">
+              ✨ Flip All Cards
+            </button>
+          </div>
+        </div>
+
+        <!-- 52 Reasons Flip Grid -->
+        <div id="reasons-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[640px] overflow-y-auto pr-1">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- =================================================================
+           MODULE 6: FAIRY-TALE MEMORY & MILESTONE CASTLE
+      ================================================================== -->
+      <div id="panel-castle" class="module-panel hidden royal-glass rounded-[2rem] p-6 sm:p-10">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="inline-block px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold mb-2">
+            🏰 Chronicles of Rino &amp; Prinsu
+          </span>
+          <h3 class="font-royal text-2xl sm:text-3xl font-bold text-purple-950">
+            Our Royal Fairy-Tale Storybook
+          </h3>
+          <p class="text-xs sm:text-sm text-purple-800/80 mt-1">
+            Every magical chapter that led to celebrating you today, my princess!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Chapter 1: May 8, 3:00 PM -->
+          <div class="bg-white/85 rounded-3xl p-6 border-2 border-indigo-200 shadow-md hover:shadow-xl transition relative overflow-hidden">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-extrabold">
+                Chapter I • May 8 at 3:00 PM
+              </span>
+              <span class="text-2xl">💬✨</span>
+            </div>
+            <h4 class="font-serifDisplay text-xl font-bold text-purple-950">
+              Where the Magic Began on Discord
+            </h4>
+            <p class="text-xs sm:text-sm text-purple-900/85 mt-2 leading-relaxed">
+              At 3:00 PM on May 8, destiny opened a chat window on Discord and introduced Prinsu to Ritija. What felt like an ordinary afternoon turned into the luckiest moment of my life—the spark that started everything we have today.
+            </p>
+          </div>
+
+          <!-- Chapter 2: May 24 -->
+          <div class="bg-white/85 rounded-3xl p-6 border-2 border-pink-200 shadow-md hover:shadow-xl transition relative overflow-hidden">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-extrabold">
+                Chapter II • May 24
+              </span>
+              <span class="text-2xl">🎂👑</span>
+            </div>
+            <h4 class="font-serifDisplay text-xl font-bold text-purple-950">
+              The Day a True Princess Was Born
+            </h4>
+            <p class="text-xs sm:text-sm text-purple-900/85 mt-2 leading-relaxed">
+              May 24 is the day the world became infinitely brighter because you arrived in it, Rino! Every year on this date, the stars shine a little harder to celebrate the sweetest, purest soul ever born.
+            </p>
+          </div>
+
+          <!-- Chapter 3: October 7, 2025 at 12:00 PM -->
+          <div class="bg-white/85 rounded-3xl p-6 border-2 border-blue-300 shadow-md hover:shadow-xl transition relative overflow-hidden">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-extrabold">
+                Chapter III • October 7, 2025 at 12:00 PM
+              </span>
+              <span class="text-2xl">💑💠</span>
+            </div>
+            <h4 class="font-serifDisplay text-xl font-bold text-purple-950">
+              Officially My Forever Princess
+            </h4>
+            <p class="text-xs sm:text-sm text-purple-900/85 mt-2 leading-relaxed">
+              At 12:00 PM noon on October 7, 2025, our story became official! Over a whole year of laughter, late-night talks, endless care, and unbreakable love—and every single day with you still feels like butterflies.
+            </p>
+          </div>
+
+          <!-- Chapter 4: November 18, 2026 -->
+          <div class="bg-gradient-to-br from-pink-100/90 via-purple-100/90 to-blue-100/90 rounded-3xl p-6 border-2 border-amber-300 shadow-md hover:shadow-xl transition relative overflow-hidden">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-3 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-extrabold">
+                Chapter IV • November 18, 2026 (Today!)
+              </span>
+              <span class="text-2xl">👑🎉</span>
+            </div>
+            <h4 class="font-serifDisplay text-xl font-bold text-purple-950">
+              Happy National Princess Day, My Love!
+            </h4>
+            <p class="text-xs sm:text-sm text-purple-950/90 mt-2 leading-relaxed">
+              Today the entire kingdom celebrates Princess Ritija! Here's to spoiling you today, tomorrow, and for every Princess Day for the rest of our lives. I love you beyond words, Rino! 💙
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: ROYAL FOOTER OATH
+    ====================================================================== -->
+    <footer class="royal-glass rounded-3xl p-6 sm:p-8 text-center">
+      <div class="text-3xl mb-2">👑💠💖</div>
+      <p class="font-royal text-lg sm:text-2xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+        Long Live Princess Ritija (Rino)!
+      </p>
+      <p class="text-xs sm:text-sm text-purple-800/80 mt-1 font-semibold">
+        Handcrafted with infinite love, Blue Spider Lilies &amp; sparkles by Prinsu • Happy Princess Day, November 18, 2026 💙
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- =======================================================================
+       JAVASCRIPT: WEB AUDIO MUSIC BOX, PARTICLE CANVAS, SPIDER LILY GARDEN & LOGIC
+  ======================================================================== -->
+  <script>
+    /* -----------------------------------------------------------------------
+       1. WEB AUDIO API: GENTLE MUSIC BOX MELODY & SPARKLE CHIMES
+    ------------------------------------------------------------------------ */
+    let audioCtx = null;
+    let musicPlaying = false;
+    let melodyInterval = null;
+    let noteIndex = 0;
+
+    // Gentle fairy-tale lullaby / music-box notes (C major / A minor dreamy arpeggio)
+    const musicBoxNotes = [
+      523.25, 659.25, 783.99, 987.77, 1046.50, 987.77, 783.99, 659.25,
+      587.33, 698.46, 880.00, 1046.50, 987.77, 783.99, 659.25, 523.25
+    ];
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function playChime(freq = 880, duration = 0.6, volume = 0.08) {
+      try {
+        initAudio();
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+        osc.frequency.exponentialRampToValueAtTime(freq * 1.01, now + duration);
+
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.linearRampToValueAtTime(volume, now + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + duration);
+      } catch (e) {
+        // Ignore audio errors if blocked before interaction
+      }
+    }
+
+    function playFanfare() {
+      const chord = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+      chord.forEach((f, idx) => {
+        setTimeout(() => playChime(f, 0.9, 0.09), idx * 95);
+      });
+    }
+
+    function toggleMusicBox() {
+      const btnLabel = document.getElementById('music-label');
+      const btnIcon = document.getElementById('music-icon');
+      if (!musicPlaying) {
+        initAudio();
+        musicPlaying = true;
+        btnLabel.textContent = 'Music Box: On';
+        btnIcon.textContent = '🎶';
+        showToast('🎶 Royal Music Box Playing', 'Enjoy your fairy-tale melody, Princess Rino!');
+        melodyInterval = setInterval(() => {
+          playChime(musicBoxNotes[noteIndex % musicBoxNotes.length], 0.85, 0.05);
+          noteIndex++;
+        }, 520);
+      } else {
+        musicPlaying = false;
+        clearInterval(melodyInterval);
+        btnLabel.textContent = 'Music Box: Off';
+        btnIcon.textContent = '🎵';
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       2. TOAST NOTIFICATION & PARTICLE BURST ENGINE
+    ------------------------------------------------------------------------ */
+    let toastTimeout = null;
+    function showToast(title, msg, icon = '👑') {
+      const toast = document.getElementById('royal-toast');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-msg').textContent = msg;
+      document.getElementById('toast-icon').textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3400);
+    }
+
+    function spawnEmojiBurst(x, y, emojis = ['💖', '👑', '💠', '✨', '💙', '🌸'], count = 16) {
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('div');
+        el.className = 'burst-particle text-xl sm:text-2xl select-none';
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        el.style.left = `${x}px`;
+        el.style.top = `${y}px`;
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
+        const dist = 70 + Math.random() * 140;
+        el.style.setProperty('--tx', `${Math.cos(angle) * dist}px`);
+        el.style.setProperty('--ty', `${Math.sin(angle) * dist - 40}px`);
+        el.style.setProperty('--rot', `${(Math.random() - 0.5) * 360}deg`);
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 1600);
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       3. CORONATION CEREMONY LOGIC
+    ------------------------------------------------------------------------ */
+    let isCrowned = false;
+    function crownPrincess(event) {
+      const tiara = document.getElementById('tiara-wrapper');
+      const status = document.getElementById('coronation-status');
+      const btnText = document.getElementById('coronation-btn-text');
+
+      tiara.classList.remove('animate-float-slow');
+      tiara.classList.add('crowned-tiara');
+
+      const x = event ? event.clientX : window.innerWidth / 2;
+      const y = event ? event.clientY : 260;
+      spawnEmojiBurst(x, y, ['👑', '💠', '💖', '✨', '💙', '🦋'], 26);
+      playFanfare();
+
+      if (!isCrowned) {
+        isCrowned = true;
+        btnText.textContent = 'All Hail Princess Ritija! 👑';
+        status.innerHTML = '👑 <span class="text-pink-600">OFFICIALLY CROWNED:</span> Her Royal Highness Princess Ritija (Rino) of Prinsu\'s Heart! 💙✨';
+        showToast('👑 Coronation Complete!', 'Long live Princess Ritija! Tap again for more royal sparkles!', '👑');
+      } else {
+        showToast('✨ Royal Sparkle Shower!', 'Your crown shines brighter than a million stars, Rino!', '💠');
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       4. TAB SWITCHER FOR ROYAL CONTROL PANEL
+    ------------------------------------------------------------------------ */
+    function switchTab(tabName) {
+      playChime(783.99, 0.4, 0.06);
+      document.querySelectorAll('.module-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+      const activePanel = document.getElementById(`panel-${tabName}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+
+      // Highlight active button
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-pink-400', 'bg-pink-50/90', 'shadow-md');
+      });
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+      if (activeBtn) {
+        activeBtn.classList.add('border-pink-400', 'bg-pink-50/90', 'shadow-md');
+      }
+
+      if (tabName === 'garden') {
+        resizeLilyCanvas();
+      }
+
+      const dashboard = document.getElementById('royal-dashboard');
+      if (dashboard) {
+        dashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       5. MODULE 1: WAX-SEALED SCROLL TOGGLE
+    ------------------------------------------------------------------------ */
+    let scrollOpened = false;
+    function toggleScroll() {
+      const scrollEl = document.getElementById('royal-scroll');
+      const sealText = document.getElementById('seal-text');
+      scrollOpened = !scrollOpened;
+
+      if (scrollOpened) {
+        scrollEl.classList.remove('scroll-closed');
+        scrollEl.classList.add('scroll-open');
+        sealText.textContent = 'Roll Up';
+        playFanfare();
+        showToast('📜 Royal Decree Unrolled!', 'Read Prinsu\'s love letter written just for you, Rino!', '💌');
+      } else {
+        scrollEl.classList.remove('scroll-open');
+        scrollEl.classList.add('scroll-closed');
+        sealText.textContent = 'Break Seal';
+        playChime(523.25, 0.4, 0.05);
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       6. MODULE 2: INTERACTIVE BLUE SPIDER LILY GARDEN CANVAS
+    ------------------------------------------------------------------------ */
+    const lilyCanvas = document.getElementById('lily-canvas');
+    const lilyCtx = lilyCanvas.getContext('2d');
+    let lilies = [];
+    let fireflies = [];
+
+    const lilyMessages = [
+      "Just like a rare Blue Spider Lily, you are one of a kind in the entire universe, Rino! 💙",
+      "Every petal of this Blue Spider Lily carries a thousand 'I love yous' from Prinsu! 💠",
+      "Since May 8 at 3:00 PM, my heart has bloomed only for you, Princess Ritija! 🌸",
+      "You are softer than moonlight and prettier than a whole field of Blue Spider Lilies! ✨",
+      "October 7, 2025 at 12:00 PM was the moment my life turned into a fairy tale! 👑",
+      "Whenever you miss me, remember Prinsu is always cheering for his Princess Rino! 💖",
+      "Your smile is my favorite magic spell in the whole kingdom! 🦋",
+      "Happy Princess Day, my love! May your heart always feel this cherished! 💙👑"
+    ];
+
+    function resizeLilyCanvas() {
+      const container = document.getElementById('garden-container');
+      if (!container) return;
+      lilyCanvas.width = container.clientWidth;
+      lilyCanvas.height = container.clientHeight;
+      if (lilies.length === 0) {
+        seedInitialGarden();
+      }
+    }
+
+    function seedInitialGarden() {
+      const w = lilyCanvas.width || 800;
+      const h = lilyCanvas.height || 400;
+      lilies = [
+        { x: w * 0.25, y: h * 0.62, scale: 1.05, bloom: 1, swayOffset: 0.2, hue: 215 },
+        { x: w * 0.52, y: h * 0.56, scale: 1.25, bloom: 1, swayOffset: 1.4, hue: 205 },
+        { x: w * 0.78, y: h * 0.65, scale: 1.0, bloom: 1, swayOffset: 2.6, hue: 222 }
+      ];
+      fireflies = Array.from({ length: 28 }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: 1.5 + Math.random() * 2.5,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.5,
+        phase: Math.random() * Math.PI * 2
+      }));
+      updateLilyCount();
+    }
+
+    function updateLilyCount() {
+      document.getElementById('lily-count').textContent = lilies.length;
+    }
+
+    function addBlueSpiderLily(x, y) {
+      if (lilies.length > 45) {
+        lilies.shift();
+      }
+      lilies.push({
+        x,
+        y,
+        scale: 0.85 + Math.random() * 0.45,
+        bloom: 0.05,
+        swayOffset: Math.random() * Math.PI * 2,
+        hue: 200 + Math.floor(Math.random() * 28)
+      });
+      updateLilyCount();
+      playChime(659.25 + Math.random() * 400, 0.65, 0.07);
+      const msg = lilyMessages[Math.floor(Math.random() * lilyMessages.length)];
+      document.getElementById('lily-secret-text').textContent = `"${msg}"`;
+    }
+
+    function bloomRandomBouquet() {
+      const w = lilyCanvas.width;
+      const h = lilyCanvas.height;
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          addBlueSpiderLily(w * (0.15 + Math.random() * 0.7), h * (0.42 + Math.random() * 0.42));
+        }, i * 130);
+      }
+      showToast('💠 Royal Bouquet Bloomed!', '5 magical Blue Spider Lilies grew for Princess Rino!', '💠');
+    }
+
+    function clearGarden() {
+      lilies = [];
+      updateLilyCount();
+      document.getElementById('lily-secret-text').textContent = '"Tap anywhere in the meadow to plant fresh Blue Spider Lilies for Rino! 💙"';
+    }
+
+    lilyCanvas.addEventListener('click', (e) => {
+      const rect = lilyCanvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      addBlueSpiderLily(x, y);
+      spawnEmojiBurst(e.clientX, e.clientY, ['💠', '✨', '💙'], 8);
+    });
+
+    function drawBlueSpiderLily(ctx, lily, time) {
+      if (lily.bloom < 1) {
+        lily.bloom = Math.min(1, lily.bloom + 0.035);
+      }
+      const sway = Math.sin(time * 0.002 + lily.swayOffset) * 6;
+      const baseH = lilyCanvas.height;
+      const headX = lily.x + sway;
+      const headY = lily.y;
+      const s = lily.scale * lily.bloom;
+
+      // Glowing Emerald-Teal Stem
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(lily.x, baseH);
+      ctx.quadraticCurveTo(lily.x + sway * 0.4, (baseH + headY) / 2, headX, headY);
+      ctx.strokeStyle = 'rgba(52, 211, 153, 0.55)';
+      ctx.lineWidth = 3 * s;
+      ctx.stroke();
+
+      // Ambient Sapphire Aura behind Blossom
+      const grad = ctx.createRadialGradient(headX, headY, 2, headX, headY, 68 * s);
+      grad.addColorStop(0, `hsla(${lily.hue}, 100%, 75%, 0.48)`);
+      grad.addColorStop(0.5, `hsla(${lily.hue}, 95%, 60%, 0.16)`);
+      grad.addColorStop(1, 'rgba(30, 58, 138, 0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(headX, headY, 68 * s, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Draw 6 Delicate Recurving Blue Spider Lily Petals
+      ctx.translate(headX, headY);
+      const petalCount = 6;
+      for (let i = 0; i < petalCount; i++) {
+        ctx.save();
+        ctx.rotate((Math.PI * 2 * i) / petalCount + Math.sin(time * 0.0015 + i) * 0.04);
+
+        // Wavy slender petal
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(10 * s, -22 * s, 26 * s, -42 * s, 14 * s, -58 * s);
+        ctx.bezierCurveTo(6 * s, -44 * s, -4 * s, -24 * s, 0, 0);
+        ctx.fillStyle = `hsla(${lily.hue}, 95%, 72%, 0.85)`;
+        ctx.fill();
+        ctx.strokeStyle = '#e0f2fe';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Long graceful curved stamen filament + glowing tip
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.quadraticCurveTo(22 * s, -45 * s, 36 * s, -72 * s);
+        ctx.strokeStyle = `hsla(${lily.hue - 10}, 100%, 82%, 0.9)`;
+        ctx.lineWidth = 1.3 * s;
+        ctx.stroke();
+
+        // Glowing golden-cyan pollen anther tip
+        ctx.beginPath();
+        ctx.arc(36 * s, -72 * s, 2.5 * s, 0, Math.PI * 2);
+        ctx.fillStyle = '#fef08a';
+        ctx.fill();
+
+        ctx.restore();
+      }
+
+      // Center Luminous Core
+      ctx.beginPath();
+      ctx.arc(0, 0, 5 * s, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function animateLilyGarden(time) {
+      if (lilyCanvas.width > 0 && lilyCanvas.height > 0) {
+        lilyCtx.clearRect(0, 0, lilyCanvas.width, lilyCanvas.height);
+
+        // Draw subtle crescent moon in corner
+        lilyCtx.save();
+        lilyCtx.beginPath();
+        lilyCtx.arc(lilyCanvas.width - 75, 65, 26, 0, Math.PI * 2);
+        lilyCtx.fillStyle = 'rgba(254, 249, 195, 0.85)';
+        lilyCtx.shadowColor = '#fef08a';
+        lilyCtx.shadowBlur = 25;
+        lilyCtx.fill();
+        lilyCtx.restore();
+
+        // Draw Fireflies
+        fireflies.forEach(f => {
+          f.x += f.vx;
+          f.y += f.vy;
+          if (f.x < 0) f.x = lilyCanvas.width;
+          if (f.x > lilyCanvas.width) f.x = 0;
+          if (f.y < 0) f.y = lilyCanvas.height;
+          if (f.y > lilyCanvas.height) f.y = 0;
+
+          const alpha = 0.35 + 0.65 * Math.abs(Math.sin(time * 0.003 + f.phase));
+          lilyCtx.beginPath();
+          lilyCtx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          lilyCtx.fillStyle = `rgba(186, 230, 253, ${alpha})`;
+          lilyCtx.fill();
+        });
+
+        // Draw all Blue Spider Lilies
+        lilies.forEach(lily => drawBlueSpiderLily(lilyCtx, lily, time));
+      }
+      requestAnimationFrame(animateLilyGarden);
+    }
+
+    /* -----------------------------------------------------------------------
+       7. MODULE 3: ROYAL PAMPER COUPONS
+    ------------------------------------------------------------------------ */
+    const couponData = [
+      { id: 1, icon: '😘', title: 'Unlimited Forehead Kisses', desc: 'Redeemable anytime for 1,000+ gentle forehead kisses & soft head pats from Prinsu.', claimed: false },
+      { id: 2, icon: '🍰', title: 'Royal Feast & Sweet Treat', desc: 'Your favorite food, dessert, or cozy drink delivered straight to Princess Rino!', claimed: false },
+      { id: 3, icon: '🎬', title: 'Cozy Late-Night Movie & Call', desc: 'You pick the movie or show—Prinsu brings maximum cuddles & attention!', claimed: false },
+      { id: 4, icon: '🛌', title: 'Zero-Stress Princess Nap Pass', desc: 'Full permission to rest like royalty while Prinsu handles all worries & cheers you on.', claimed: false },
+      { id: 5, icon: '🫂', title: '10-Minute Tightest Bear Hug', desc: 'An unbreakable, super-warm hug where nobody lets go until Rino feels 100% loved.', claimed: false },
+      { id: 6, icon: '💠', title: 'One Ultimate Royal Wish', desc: 'Valid for ANY special wish Princess Ritija desires—no questions asked!', claimed: false }
+    ];
+
+    function renderCoupons() {
+      const grid = document.getElementById('coupons-grid');
+      grid.innerHTML = '';
+      let claimedTotal = 0;
+
+      couponData.forEach(c => {
+        if (c.claimed) claimedTotal++;
+        const card = document.createElement('div');
+        card.onclick = (e) => claimCoupon(c.id, e);
+        card.className = `relative rounded-3xl p-6 border-2 transition-all cursor-pointer select-none overflow-hidden ${
+          c.claimed
+            ? 'bg-pink-50/95 border-pink-400 shadow-inner'
+            : 'bg-gradient-to-br from-white via-amber-50/60 to-pink-50/70 border-amber-300 shadow-md hover:-translate-y-1.5 hover:shadow-xl'
+        }`;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-3xl">${c.icon}</span>
+            <span class="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full ${
+              c.claimed ? 'bg-pink-200 text-pink-800' : 'bg-amber-100 text-amber-800'
+            }">
+              ${c.claimed ? 'Redeemed ✨' : 'Tap to Claim'}
+            </span>
+          </div>
+          <h4 class="font-serifDisplay text-lg font-bold text-purple-950">${c.title}</h4>
+          <p class="text-xs text-purple-800/85 mt-1.5 leading-relaxed">${c.desc}</p>
+          <div class="mt-4 pt-3 border-t border-dashed border-amber-300 flex items-center justify-between text-[11px] font-bold text-blue-700">
+            <span>Issued by: Prinsu</span>
+            <span>For: Princess Rino 👑</span>
+          </div>
+          ${
+            c.claimed
+              ? `<div class="stamp-badge absolute inset-0 bg-white/45 backdrop-blur-[1px] flex items-center justify-center pointer-events-none">
+                   <div class="border-4 border-pink-600 text-pink-600 font-royal font-black text-sm sm:text-base px-4 py-2 rounded-xl bg-white/95 shadow-xl">
+                     CLAIMED BY PRINCESS RINO 💖
+                   </div>
+                 </div>`
+              : ''
+          }
+        `;
+        grid.appendChild(card);
+      });
+
+      document.getElementById('claimed-count').textContent = claimedTotal;
+    }
+
+    function claimCoupon(id, event) {
+      const coupon = couponData.find(item => item.id === id);
+      if (!coupon) return;
+      if (!coupon.claimed) {
+        coupon.claimed = true;
+        renderCoupons();
+        playFanfare();
+        spawnEmojiBurst(event.clientX, event.clientY, ['🎟️', '💖', '👑', '✨'], 18);
+        showToast('🎟️ Royal Pass Claimed!', `"${coupon.title}" stamped for Princess Ritija!`, '💖');
+      } else {
+        showToast('💖 Already Claimed!', 'Prinsu already has this royal pass queued up for you!', '👑');
+      }
+    }
+
+    function resetCoupons() {
+      couponData.forEach(c => (c.claimed = false));
+      renderCoupons();
+      showToast('✨ Passes Refreshed', 'All 6 royal pamper tickets are ready to claim again!', '🎟️');
+    }
+
+    /* -----------------------------------------------------------------------
+       8. MODULE 4: CUTENESS SCANNER & LOVE SHOWER
+    ------------------------------------------------------------------------ */
+    let kisses = 1000;
+    let hugs = 500;
+    let lilyGifts = 118;
+
+    const sweetCompliments = [
+      "You are the cutest human being ever created, my Rino! 💖",
+      "Even a crown of stars couldn't outshine your smile, Ritija! 👑",
+      "Prinsu's heart beats 100x happier whenever you're around! 💙",
+      "You're prettier than a million glowing Blue Spider Lilies! 💠",
+      "Alert: Rino's cuteness is officially causing royal heart-melts! 🥰",
+      "You are my favorite notification, my favorite voice, and my favorite person! ✨",
+      "No fairy tale princess compares to my real-life Ritija! 🌸"
+    ];
+
+    function runCutenessScan(event) {
+      const bar = document.getElementById('scanner-bar');
+      const percent = document.getElementById('scanner-percent');
+      const result = document.getElementById('scanner-result');
+
+      bar.style.width = '15%';
+      percent.textContent = 'Scanning Royal Aura...';
+      result.innerHTML = '⏳ Analyzing Rino\'s sweetness, beauty, and pure princess magic...';
+      playChime(587.33, 0.3, 0.06);
+
+      setTimeout(() => {
+        bar.style.width = '100%';
+        percent.textContent = '10,000,000% (OVERLOAD!)';
+        result.innerHTML = '🚨 <span class="text-pink-600">ROYAL SCALE BROKEN!</span> Subject <strong>Ritija (Rino)</strong> radiates 10,000,000% Pure Princess Cuteness &amp; Irresistible Charm! 👑💖';
+        playFanfare();
+        if (event) {
+          spawnEmojiBurst(event.clientX, event.clientY, ['💖', '👑', '🔮', '✨', '💠'], 22);
+        }
+        showToast('🚨 Cuteness Overload!', '10,000,000% Pure Royalty detected in Princess Rino!', '💖');
+      }, 850);
+    }
+
+    function showerLove(event) {
+      kisses += Math.floor(15 + Math.random() * 25);
+      hugs += Math.floor(5 + Math.random() * 12);
+      lilyGifts += 3;
+
+      document.getElementById('kiss-counter').textContent = kisses.toLocaleString();
+      document.getElementById('hug-counter').textContent = hugs.toLocaleString();
+      document.getElementById('lily-gift-counter').textContent = lilyGifts.toLocaleString();
+
+      const comp = sweetCompliments[Math.floor(Math.random() * sweetCompliments.length)];
+      const compEl = document.getElementById('compliment-display');
+      if (compEl) compEl.textContent = `"${comp}"`;
+
+      const x = event ? event.clientX : window.innerWidth / 2;
+      const y = event ? event.clientY : window.innerHeight / 2;
+      spawnEmojiBurst(x, y, ['😘', '💖', '🫂', '💠', '👑', '💕'], 18);
+      playChime(880 + Math.random() * 250, 0.5, 0.07);
+      showToast('💖 Love Shower Sent!', comp, '😘');
+    }
+
+    /* -----------------------------------------------------------------------
+       9. MODULE 5: 52 REASONS WHY RITIJA IS THE ULTIMATE PRINCESS
+    ------------------------------------------------------------------------ */
+    const reasonsList = [
+      "Your adorable smile can instantly cure any bad day Prinsu ever has.",
+      "The way your eyes light up makes you look like pure fairy-tale magic.",
+      "You are my sweetest Rino—soft, caring, and endlessly lovable.",
+      "Remembering May 8 at 3:00 PM on Discord still gives me the happiest butterflies.",
+      "Your voice is my favorite melody in the entire world.",
+      "You love Blue Spider Lilies, which proves your soul is rare and poetic.",
+      "Since October 7, 2025 at 12:00 PM, every single day has felt brighter with you.",
+      "You make even the simplest conversations feel special and unforgettable.",
+      "Your kindness and empathy make you a true princess inside and out.",
+      "The cute little expressions you make are 100% irresistible.",
+      "You inspire me to be a better, stronger, and more loving partner every day.",
+      "Being called 'yours' is the greatest honor of my life.",
+      "Your laugh is contagious and sounds like pure happiness.",
+      "You bring calm, warmth, and peace into my heart whenever we talk.",
+      "Even when you're sleepy or pouty, you are still the cutest human alive.",
+      "You remember little details that show how deeply you care.",
+      "Every memory we've built over the past year is a treasure I guard closely.",
+      "You have the prettiest heart that deserves to be protected forever.",
+      "Talking to you feels like coming home after a long journey.",
+      "Your elegance and grace make you effortlessly royal.",
+      "You make ordinary days feel like royal holidays.",
+      "I love how uniquely 'you' you are—never trying to be anyone else.",
+      "Your hugs (and virtual hugs!) feel like the safest place on Earth.",
+      "You turn simple moments into core memories I'll cherish forever.",
+      "Celebrating May 24—your birthday—is one of my favorite days of the year.",
+      "You are my best friend, my confidante, and my forever princess.",
+      "Your strength and resilience amaze me more than you know.",
+      "The way you care about the people you love is truly inspiring.",
+      "Just seeing your name pop up on my screen makes me grin instantly.",
+      "You are sweeter than every dessert in the royal bakery.",
+      "Our late-night talks are my favorite part of the day.",
+      "You have a magic aura that turns everything around you lovely.",
+      "I love hyping you up because you deserve the entire world.",
+      "You're the main character of my favorite love story.",
+      "Your intelligence and wit keep me smiling endlessly.",
+      "No crown could ever match the beauty of your soul, Ritija.",
+      "You make loving you the easiest thing I have ever done.",
+      "Every Blue Spider Lily reminds me of how rare and breathtaking you are.",
+      "You listen with your whole heart and make me feel truly understood.",
+      "Your cuteness breaks every scientific scale ever invented.",
+      "You bring sunshine even on the cloudiest afternoons.",
+      "I love dreaming about all our future adventures together.",
+      "You deserve to be pampered not just on November 18, but all 365 days.",
+      "Your gentle spirit makes the world a softer, kinder place.",
+      "You are my lucky charm since that May 8 afternoon.",
+      "Watching you happy is my #1 mission in life.",
+      "You look effortlessly gorgeous every single day.",
+      "Our bond has grown stronger and sweeter with every passing month.",
+      "You are Prinsu's favorite person in every timeline and universe.",
+      "Your heart is pure gold wrapped in stardust and sapphire petals.",
+      "You make me believe in true fairy-tale romance.",
+      "Because you are Ritija—my Rino—and nobody could ever replace you. 💙"
+    ];
+
+    let allFlipped = false;
+
+    function renderReasons() {
+      const grid = document.getElementById('reasons-grid');
+      const query = (document.getElementById('reason-search')?.value || '').toLowerCase().trim();
+      grid.innerHTML = '';
+
+      reasonsList.forEach((reason, index) => {
+        if (query && !reason.toLowerCase().includes(query) && !`#${index + 1}`.includes(query)) {
+          return;
+        }
+        const card = document.createElement('div');
+        card.className = `flip-card cursor-pointer select-none ${allFlipped ? 'flipped' : ''}`;
+        card.onclick = () => {
+          card.classList.toggle('flipped');
+          playChime(700 + (index % 8) * 55, 0.35, 0.05);
+        };
+
+        const isBlue = index % 2 === 1;
+        card.innerHTML = `
+          <div class="flip-card-inner">
+            <div class="flip-card-front border-2 ${
+              isBlue
+                ? 'bg-gradient-to-br from-blue-50 to-indigo-100 border-blue-200'
+                : 'bg-gradient-to-br from-pink-50 to-purple-100 border-pink-200'
+            } shadow-sm">
+              <span class="text-2xl mb-1">${isBlue ? '💠' : '👑'}</span>
+              <span class="font-royal text-lg font-black text-purple-950">Reason #${index + 1}</span>
+              <span class="text-[11px] font-bold text-pink-600 mt-1">Tap to reveal ✨</span>
+            </div>
+            <div class="flip-card-back border-2 ${
+              isBlue
+                ? 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white border-blue-300'
+                : 'bg-gradient-to-br from-pink-500 to-purple-600 text-white border-pink-300'
+            } shadow-md">
+              <span class="text-[10px] font-extrabold uppercase tracking-widest opacity-80 mb-1">#${index + 1} • For Rino</span>
+              <p class="text-xs sm:text-sm font-bold leading-snug">${reason}</p>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function flipAllReasons() {
+      allFlipped = !allFlipped;
+      renderReasons();
+      playFanfare();
+      showToast(
+        allFlipped ? '✨ All 52 Reasons Revealed!' : '👑 Cards Reset!',
+        allFlipped ? 'Every single reason Prinsu loves Princess Ritija!' : 'Tap any card to flip it individually!',
+        '💖'
+      );
+    }
+
+    /* -----------------------------------------------------------------------
+       10. AMBIENT BACKGROUND FLOATING HEARTS, SPARKLES & PETALS CANVAS
+    ------------------------------------------------------------------------ */
+    const ambientCanvas = document.getElementById('ambient-canvas');
+    const ambCtx = ambientCanvas.getContext('2d');
+    let ambientParticles = [];
+
+    function initAmbientCanvas() {
+      ambientCanvas.width = window.innerWidth;
+      ambientCanvas.height = window.innerHeight;
+      const symbols = ['💖', '💠', '✨', '👑', '💙', '🌸'];
+      ambientParticles = Array.from({ length: 34 }, () => ({
+        x: Math.random() * ambientCanvas.width,
+        y: Math.random() * ambientCanvas.height,
+        size: 12 + Math.random() * 14,
+        speedY: 0.25 + Math.random() * 0.55,
+        sway: Math.random() * Math.PI * 2,
+        symbol: symbols[Math.floor(Math.random() * symbols.length)],
+        opacity: 0.22 + Math.random() * 0.32
+      }));
+    }
+
+    function animateAmbient() {
+      ambCtx.clearRect(0, 0, ambientCanvas.width, ambientCanvas.height);
+      ambientParticles.forEach(p => {
+        p.y -= p.speedY;
+        p.sway += 0.015;
+        const drawX = p.x + Math.sin(p.sway) * 18;
+        if (p.y < -30) {
+          p.y = ambientCanvas.height + 30;
+          p.x = Math.random() * ambientCanvas.width;
+        }
+        ambCtx.save();
+        ambCtx.globalAlpha = p.opacity;
+        ambCtx.font = `${p.size}px sans-serif`;
+        ambCtx.fillText(p.symbol, drawX, p.y);
+        ambCtx.restore();
+      });
+      requestAnimationFrame(animateAmbient);
+    }
+
+    /* -----------------------------------------------------------------------
+       11. WINDOW ONLOAD & RESIZE HANDLERS
+    ------------------------------------------------------------------------ */
+    window.addEventListener('resize', () => {
+      ambientCanvas.width = window.innerWidth;
+      ambientCanvas.height = window.innerHeight;
+      resizeLilyCanvas();
+    });
+
+    window.onload = function () {
+      initAmbientCanvas();
+      animateAmbient();
+      renderCoupons();
+      renderReasons();
+      resizeLilyCanvas();
+      requestAnimationFrame(animateLilyGarden);
+    };
+  </script>
+</body>
+</html>
